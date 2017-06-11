@@ -1,10 +1,12 @@
-import React from 'react';
-import { render } from 'react-dom';
+import React from 'react'
+import { render } from 'react-dom'
 
 // Include components
-import App from './components/App';
+import Game from './containers/Game/index'
+
+require('./global.scss')
 
 render(
-	<App />,
-	document.getElementById('root')
-);
+  <Game />,
+  document.getElementById('root')
+)

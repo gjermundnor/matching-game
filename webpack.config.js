@@ -1,14 +1,13 @@
-var path = require('path');
-var webpack = require('webpack');
- 
+var path = require('path')
+
 module.exports = {
   entry: [
     './app'
   ],
   output: {
-    path: path.resolve(__dirname, "static"),
-    publicPath: "/static/",
-    filename: "bundle.js"
+    path: path.resolve(__dirname, 'static'),
+    publicPath: '/static/',
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
@@ -19,7 +18,11 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
-  },
-};
+  }
+}
